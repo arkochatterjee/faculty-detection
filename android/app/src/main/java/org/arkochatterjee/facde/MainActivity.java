@@ -29,8 +29,11 @@ public class MainActivity extends AppCompatActivity {
                     Log.i("Messages", dataSnapshot.toString());
                     String data=dataSnapshot.toString();
                     String teacher1="5029";
-                    if(data.)
-                    ((TextView)findViewById(R.id.textView1)).setText(dataSnapshot.toString());
+                    if(data.contains(teacher1))
+                    {
+                        ((TextView)findViewById(R.id.textView1)).setText("Teacher 1 is there!");
+                    }
+                    //((TextView)findViewById(R.id.textView1)).setText(dataSnapshot.toString());
                     /*for(DataSnapshot postSnapShot:dataSnapshot.getChildren())
                     {
                         MotionDetect user=postSnapShot.getValue(MotionDetect.class);
