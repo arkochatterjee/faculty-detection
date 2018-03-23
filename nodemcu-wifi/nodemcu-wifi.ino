@@ -1,8 +1,12 @@
+#include <FirebaseArduino.h>
  #include <ESP8266WiFi.h>
 char input[12];
 int count=0;
 const char* ssid     = "baal chero";
 const char* password = "arko1234";
+#define FIREBASE_HOST "node-mcu-b24f6.firebaseio.com"
+#define FIREBASE_AUTH "NcWYwOPdHR2EUET7g2JlAoJRU0KNyCl3XgeRDI1b"
+
 
 int wifiStatus;
 
@@ -13,13 +17,16 @@ void setup() {
   
    WiFi.begin(ssid, password);
       
-    /*  while (WiFi.status() != WL_CONNECTED) {
+      while (WiFi.status() != WL_CONNECTED) {
         delay(500);
         Serial.print(".");
-      }*/
+      }
+     Firebase.begin(FIREBASE_HOST, FIREBASE_AUTH);
 }
 
 void loop() {
+
+   
   
    if(Serial.available())
   {
@@ -33,9 +40,7 @@ void loop() {
     Serial.println("Data Read :");
     for(int i=0;i<12;i++)
     Serial.print(input[i]); 
-
+    Firebase.pushString("RFID",input);
     Serial.println();
   }
-  
-
 }
