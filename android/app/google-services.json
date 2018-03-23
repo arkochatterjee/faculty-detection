@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "160420913640",
+    "firebase_url": "https://node-mcu-b24f6.firebaseio.com",
+    "project_id": "node-mcu-b24f6",
+    "storage_bucket": "node-mcu-b24f6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:160420913640:android:02c8ad85e1db9dd6",
+        "android_client_info": {
+          "package_name": "org.arkochatterjee.facde"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "160420913640-gbl5k5irc0rr1g4nr53rphfen65fvt2g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAAFr7W0BtkecK5aPn1e18gO_d1huEBjKE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
