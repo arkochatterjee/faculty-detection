@@ -1,32 +1,116 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent">
-
-    <TextView
-        android:id="@+id/teacher1"
-        android:text="Teacher 1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="167dp"
-         />
-
-    <TextView
-        android:id="@+id/teacher2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/teacher1"
-        android:layout_marginTop="148dp"
-        android:text="Teacher 2" />
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
 
     <TextView
         android:id="@+id/name"
+        android:textSize="15sp"
+        android:layout_marginTop="10sp"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+
+        />
+    <TextView
+        android:id="@+id/named"
+        android:textSize="25sp"
+        android:layout_marginTop="40sp"
+        android:text="Welcome to FacDe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+
+        />
+
+    <TextView
+        android:layout_marginTop="70sp"
+        android:id="@+id/btnteacher1"
+        android:text="Teacher 1"
+
+        android:layout_marginBottom="10sp"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+
+         />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_height="wrap_content">
+
+    <Button
+        android:id="@+id/btntecher1"
+        android:layout_marginRight="30sp"
+        android:layout_width="wrap_content"
+        android:background="@drawable/btn_back"
+        android:layout_height="wrap_content"
+        android:textColor="#fff"
+         />
+
+
+        <Button
+            android:id="@+id/t1abutton"
+            android:background="@drawable/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#fff"
+            android:text="Time Table" />
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/teacher2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginBottom="10sp"
+        android:layout_marginTop="60dp"
+        android:layout_below="@+id/teacher1"
+
+        android:text="Teacher 2" />
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:gravity="center"
+    android:layout_height="wrap_content">
+
+    <Button
+        android:id="@+id/t2avbutton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="57dp"
+        android:textColor="#fff"
+        android:layout_marginTop="1dp"
+        android:layout_marginRight="30sp"
+        android:background="@drawable/btn_back"
+
          />
-</RelativeLayout>
+
+    <Button
+        android:id="@+id/t2button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#fff"
+        android:layout_marginTop="1dp"
+
+        android:background="@drawable/btn_back"
+
+        android:text="Time Table" />
+</LinearLayout>
+
+    <Button
+        android:id="@+id/signout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50sp"
+        android:text="Sign Out"
+        android:textColor="#fff"
+        android:background="@drawable/btn_signout"
+        android:layout_gravity="center"
+        />
+
+</LinearLayout>
