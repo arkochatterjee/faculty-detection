@@ -4,6 +4,7 @@
 
     <TextView
         android:id="@+id/teacher1"
+        android:text="Teacher 1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -18,5 +19,14 @@
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/teacher1"
         android:layout_marginTop="148dp"
-        android:text="TextView" />
+        android:text="Teacher 2" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="57dp"
+         />
 </RelativeLayout>

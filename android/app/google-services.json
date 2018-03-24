@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "160420913640-i7nalhd9kf8t7ci2ajb4qu8oipau8b96.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "org.arkochatterjee.facde",
+            "certificate_hash": "b76ca9626da59c0925ab5cc6d2af370d7dd37fd6"
+          }
+        },
+        {
           "client_id": "160420913640-gbl5k5irc0rr1g4nr53rphfen65fvt2g.apps.googleusercontent.com",
           "client_type": 3
         }
@@ -29,8 +37,13 @@
           "status": 1
         },
         "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "160420913640-gbl5k5irc0rr1g4nr53rphfen65fvt2g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         },
         "ads_service": {
           "status": 2
