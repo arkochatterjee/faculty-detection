@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activitymain);
 
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference myRef = database.getReference();
@@ -24,15 +24,29 @@ public class MainActivity extends AppCompatActivity {
         myRef.child("Rfid").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
+                int t1=0;
+                int t2=0;
                 if(dataSnapshot.exists())
                 {
                     Log.i("Messages", dataSnapshot.toString());
                     String data=dataSnapshot.toString();
                     String teacher1="5029";
-                    if(data.contains(teacher1))
-                    {
-                        ((TextView)findViewById(R.id.textView1)).setText("Teacher 1 is there!");
-                    }
+                    String teacher2="5900�4���1�0";
+
+                    t1=stringOccurance(data,teacher1);
+                    t2=stringOccurance(data,teacher2);
+
+                    if(t1%2==0)
+                        ((TextView)findViewById(R.id.teacher1)).setText("Teacher 1 has left!");
+                    else
+                        ((TextView)findViewById(R.id.teacher1)).setText("Teacher 1 is in the University!");
+
+                    if(t2%2==0)
+                        ((TextView)findViewById(R.id.teacher2)).setText("Teacher 2 has left!");
+                    else
+                        ((TextView)findViewById(R.id.teacher2)).setText("Teacher 2 is in the University!");
+
+
                     //((TextView)findViewById(R.id.textView1)).setText(dataSnapshot.toString());
                     /*for(DataSnapshot postSnapShot:dataSnapshot.getChildren())
                     {
@@ -49,5 +63,22 @@ public class MainActivity extends AppCompatActivity {
                 //hideProgressDialog();
             }
         });
+    }
+
+    int stringOccurance(String str,String findStr)
+    {
+        int lastIndex = 0;
+        int count = 0;
+
+        while(lastIndex != -1){
+
+            lastIndex = str.indexOf(findStr,lastIndex);
+
+            if(lastIndex != -1){
+                count ++;
+                lastIndex += findStr.length();
+            }
+        }
+        return count;
     }
 }
