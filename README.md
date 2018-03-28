@@ -1,4 +1,5 @@
-# Mozilla Hackathon 2018 | FacDe - Faculty Detection
+# This Project won 3rd Position at Mozilla Hackathon 2018
+## FacDe - Faculty Detection
 
 [Intro Video](https://www.youtube.com/watch?v=5WDgg-8Gy-U)<br>
  
